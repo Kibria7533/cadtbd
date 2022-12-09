@@ -1,7 +1,7 @@
 <footer id="footer">
     <div class="footer-content container">
         <div class="footer-adress text-center col-xs-12 col-sm-4 col-md-4">
-            <h4>Great love for humanity</h4>
+            <h4>{{setting('site.description')}}</h4>
             <a href="/donate">
                 <button class="btn btn-secondary" style="font-size: 23px;
     border: 1px solid;
@@ -20,7 +20,7 @@
                 </div>
             </div>
             <p class="text-center footer-text1">Dhaka,Bangladesh</p>
-            <p class="text-center footer-text1">+88 09613 570 632</p>
+            <p class="text-center footer-text1">+88 {{setting('site.phone')}}</p>
             <p class="text-center footer-text">info@cadtbd.org </p></div>
         <div class="footer-third col-xs-12 col-sm-4 col-md-4">
             <div class="copyright">

@@ -18,204 +18,68 @@
 
         <div class="tab-content ">
             <div class="tab-pane active" id="1">
-                <div class="blog-event">
-                    <div class="featured-img">
-                        <img src="images/image1.jpg" width="150" alt="">
-                    </div>
-                    <div class="featured-blog">
-                        <h3>Standard tab panel created on bootstrap using nav-tabs</h3>
-                        <p> From talks to charity drives to community service, this is where you can find out what’s going on, and sign up!</p>
-                        <button class="button-info">Read More</button>
-                        <button class="button-info">Register Now</button>
-                    </div>
-                </div>
-                <div class="blog-event">
-                    <div class="featured-img">
-                        <img src="images/clients/2.jpg" width="150" alt="">
-                    </div>
-                    <div class="featured-blog">
-                        <h3>Standard tab panel created on bootstrap using nav-tabs</h3>
-                        <p> From talks to charity drives to community service, this is where you can find out what’s going on, and sign up!</p>
-                        <button class="button-info">Read More</button>
-                        <button class="button-info">Register Now</button>
-                    </div>
-                </div>
-                <div class="blog-event">
-                    <div class="featured-img">
-                        <img src="images/clients/3.jpg" width="150" alt="">
-                    </div>
-                    <div class="featured-blog">
-                        <h3>Standard tab panel created on bootstrap using nav-tabs</h3>
-                        <p> From talks to charity drives to community service, this is where you can find out what’s going on, and sign up!</p>
-                        <button class="button-info">Read More</button>
-                        <button class="button-info">Register Now</button>
-                    </div>
-                </div>
-                <div class="blog-event">
-                    <div class="featured-img">
-                        <img src="images/clients/3.jpg" width="150" alt="">
-                    </div>
-                    <div class="featured-blog">
-                        <h3>Standard tab panel created on bootstrap using nav-tabs</h3>
-                        <p> From talks to charity drives to community service, this is where you can find out what’s going on, and sign up!</p>
-                        <button class="button-info">Read More</button>
-                        <button class="button-info">Register Now</button>
-                    </div>
-                </div>
-                <div class="blog-event">
-                    <div class="featured-img">
-                        <img src="images/clients/3.jpg" width="150" alt="">
-                    </div>
-                    <div class="featured-blog">
-                        <h3>Standard tab panel created on bootstrap using nav-tabs</h3>
-                        <p> From talks to charity drives to community service, this is where you can find out what’s going on, and sign up!</p>
-                        <button class="button-info">Read More</button>
-                        <button class="button-info">Register Now</button>
-                    </div>
-                </div>
+                @foreach($events as $data)
+                    @if($data->tag == 1)
+                        <div class="blog-event">
+                            <div class="featured-img">
+                                <img src="storage/{{$data->img}}" width="150" alt="">
+                            </div>
+                            <div class="featured-blog">
+                                <h3>{{$data->title}}</h3>
+                                <p> From talks to charity drives to community service, this is where you can find out what’s going on, and sign up!</p>
+                                <button class="button-info">Read More</button>
+                                <button class="button-info">Register Now</button>
+                            </div>
+                        </div>
+                    @endif
+                @endforeach
             </div>
             <div class="tab-pane" id="2">
-                <div class="blog-event">
-                    <div class="featured-img">
-                        <img src="images/clients/2.jpg" width="150" alt="">
-                    </div>
-                    <div class="featured-blog">
-                        <h3>Standard tab panel created on bootstrap using nav-tabs</h3>
-                        <p> From talks to charity drives to community service, this is where you can find out what’s going on, and sign up!</p>
-                        <button class="button-info">Read More</button>
-                        <button class="button-info">Register Now</button>
-                    </div>
-                </div>
-                <div class="blog-event">
-                    <div class="featured-img">
-                        <img src="images/clients/2.jpg" width="150" alt="">
-                    </div>
-                    <div class="featured-blog">
-                        <h3>Standard tab panel created on bootstrap using nav-tabs</h3>
-                        <p> From talks to charity drives to community service, this is where you can find out what’s going on, and sign up!</p>
-
-                        <button class="button-info">Read More</button>
-                        <button class="button-info">Register Now</button>
-                    </div>
-                </div>
-                <div class="blog-event">
-                    <div class="featured-img">
-                        <img src="images/clients/3.jpg" width="150" alt="">
-                    </div>
-                    <div class="featured-blog">
-                        <h3>Standard tab panel created on bootstrap using nav-tabs</h3>
-                        <p> From talks to charity drives to community service, this is where you can find out what’s going on, and sign up!</p>
-                        <button class="button-info">Read More</button>
-                        <button class="button-info">Register Now</button>
-                    </div>
-                </div>
-                <div class="blog-event">
-                    <div class="featured-img">
-                        <img src="images/clients/3.jpg" width="150" alt="">
-                    </div>
-                    <div class="featured-blog">
-                        <h3>Standard tab panel created on bootstrap using nav-tabs</h3>
-                        <p> From talks to charity drives to community service, this is where you can find out what’s going on, and sign up!</p>
-                        <button class="button-info">Read More</button>
-                        <button class="button-info">Register Now</button>
-                    </div>
-                </div>
-                <div class="blog-event">
-                    <div class="featured-img">
-                        <img src="images/clients/3.jpg" width="150" alt="">
-                    </div>
-                    <div class="featured-blog">
-                        <h3>Standard tab panel created on bootstrap using nav-tabs</h3>
-                        <p> From talks to charity drives to community service, this is where you can find out what’s going on, and sign up!</p>
-                        <button class="button-info">Read More</button>
-                        <button class="button-info">Register Now</button>
-                    </div>
-                </div>
+                @foreach($events as $data)
+                    @if($data->tag == 2)
+                        <div class="blog-event">
+                            <div class="featured-img">
+                                <img src="storage/{{$data->img}}" width="150" alt="">
+                            </div>
+                            <div class="featured-blog">
+                                <h3>{{$data->title}}</h3>
+                                <p> From talks to charity drives to community service, this is where you can find out what’s going on, and sign up!</p>
+                                <button class="button-info">Read More</button>
+                                <button class="button-info">Register Now</button>
+                            </div>
+                        </div>
+                    @endif
+                @endforeach
             </div>
             <div class="tab-pane" id="3">
-                <div class="blog-event">
-                    <div class="featured-img">
-                        <img src="images/clients/2.jpg" width="150" alt="">
-                    </div>
-                    <div class="featured-blog">
-                        <h3>Standard tab panel created on bootstrap using nav-tabs</h3>
-                        <p> From talks to charity drives to community service, this is where you can find out what’s going on, and sign up!</p>
-                        <button class="button-info">Read More</button>
-                        <button class="button-info">Register Now</button>
-                    </div>
-                </div>
-                <div class="blog-event">
-                    <div class="featured-img">
-                        <img src="images/clients/2.jpg" width="150" alt="">
-                    </div>
-                    <div class="featured-blog">
-                        <h3>Standard tab panel created on bootstrap using nav-tabs</h3>
-                        <p> From talks to charity drives to community service, this is where you can find out what’s going on, and sign up!</p>
-
-                        <button class="button-info">Read More</button>
-                        <button class="button-info">Register Now</button>
-                    </div>
-                </div>
-                <div class="blog-event">
-                    <div class="featured-img">
-                        <img src="images/clients/3.jpg" width="150" alt="">
-                    </div>
-                    <div class="featured-blog">
-                        <h3>Standard tab panel created on bootstrap using nav-tabs</h3>
-                        <p> From talks to charity drives to community service, this is where you can find out what’s going on, and sign up!</p>
-                        <button class="button-info">Read More</button>
-                        <button class="button-info">Register Now</button>
-                    </div>
-                </div>
-                <div class="blog-event">
-                    <div class="featured-img">
-                        <img src="images/clients/3.jpg" width="150" alt="">
-                    </div>
-                    <div class="featured-blog">
-                        <h3>Standard tab panel created on bootstrap using nav-tabs</h3>
-                        <p> From talks to charity drives to community service, this is where you can find out what’s going on, and sign up!</p>
-                        <button class="button-info">Read More</button>
-                        <button class="button-info">Register Now</button>
-                    </div>
-                </div>
-                <div class="blog-event">
-                    <div class="featured-img">
-                        <img src="images/clients/3.jpg" width="150" alt="">
-                    </div>
-                    <div class="featured-blog">
-                        <h3>Standard tab panel created on bootstrap using nav-tabs</h3>
-                        <p> From talks to charity drives to community service, this is where you can find out what’s going on, and sign up!</p>
-                        <button class="button-info">Read More</button>
-                        <button class="button-info">Register Now</button>
-                    </div>
-                </div>
+                @foreach($events as $data)
+                    @if($data->tag == 3)
+                        <div class="blog-event">
+                            <div class="featured-img">
+                                <img src="storage/{{$data->img}}" width="150" alt="">
+                            </div>
+                            <div class="featured-blog">
+                                <h3>{{$data->title}}</h3>
+                                <p> From talks to charity drives to community service, this is where you can find out what’s going on, and sign up!</p>
+                                <button class="button-info">Read More</button>
+                                <button class="button-info">Register Now</button>
+                            </div>
+                        </div>
+                    @endif
+                @endforeach
             </div>
         </div>
     </div>
     <div id="sidebar" class="col-md-3 col-lg-3">
-        <img src="images/child.png" width="100%">
-        <h4><a href="#">Enrichment Camps</a></h4>
-        <p>Nam consequat lacus purus, ac hendrerit ipsum pellentesque ut. Mauris orci ante, sodales ut lorem sed, semper aliquam diam. Sit amet tellus velit.</p>
-        <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-                <span class="sr-only">60% Complete</span>
+        @foreach($events_right as $data)
+            <img src="storage/{{$data->img}}" width="100%">
+            <h4><a href="#">{{$data->title}}</a></h4>
+            <p>{{$data->description}}</p>
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                    <span class="sr-only">60% Complete</span>
+                </div>
             </div>
-        </div>
-        <img src="images/child2.jpg" width="100%">
-        <h4><a href="#">Family Engagement</a></h4>
-        <p>Nam consequat lacus purus, ac hendrerit ipsum pellentesque ut. Mauris orci ante, sodales ut lorem sed, semper aliquam diam. Sit amet tellus velit.</p>
-        <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-                <span class="sr-only">60% Complete</span>
-            </div>
-        </div>
-        <img src="images/child2.jpg" width="100%">
-        <h4><a href="#">Enrichment Camps</a></h4>
-        <p>Nam consequat lacus purus, ac hendrerit ipsum pellentesque ut. Mauris orci ante, sodales ut lorem sed, semper aliquam diam. Sit amet tellus velit.</p>
-        <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-                <span class="sr-only">60% Complete</span>
-            </div>
-        </div>
+        @endforeach
     </div>
 @endsection()

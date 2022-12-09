@@ -11,16 +11,16 @@
 {{--            <p>Morbi rutrum massa eget mi gravida, sit amet mollis magna gravida. Morbi sodales, ligula quis ornare bibendum, magna erat convallis ipsum, id posuere ligula massa vitae leo.</p>--}}
             <ul class="clearfix">
                 <li>
-                    <p><span class="fa fa-envelope-o"></span>Email: <a href="mailto:info@cadtbd.org">info@cadtbd.org</a></p>
+                    <p><span class="fa fa-envelope-o"></span>Email: <a href="mailto:info@cadtbd.org">{{$contacts_and_footers[0]->email}}</a></p>
                 </li>
                 <li>
-                    <p><span class="fa fa-phone"></span>Phone: +88 09613 570 632</p>
+                    <p><span class="fa fa-phone"></span>Phone: +88 {{$contacts_and_footers[0]->phone}}</p>
                 </li>
                 <li>
-                    <p><span class="fa fa-fax"></span>Fax: (+84) 740-349-0600</p>
+                    <p><span class="fa fa-fax"></span>Fax: (+84) {{$contacts_and_footers[0]->email}}</p>
                 </li>
                 <li>
-                    <p><span class="fa fa-map-marker"></span>Address: Dhaka,Bangladesh</p>
+                    <p><span class="fa fa-map-marker"></span>Address: {{$contacts_and_footers[0]->address}}</p>
                 </li>
             </ul>
         </div>
