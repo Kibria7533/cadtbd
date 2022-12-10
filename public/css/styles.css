@@ -231,6 +231,7 @@ ul.nav.navbar-nav li a{
 	top: -42px;
 	left: 5px;
 	border-bottom: none;
+    margin: 16px;
 }
 @media (max-width: 768px){
 	.logo {
