@@ -6,7 +6,7 @@
     </div>
 
     <div id="exTab2" class="col-md-8 col-lg-7 col-lg-offset-1 col-md-offset-1">
-        <ul class="nav nav-tabs">
+        <ul class="nav nav-tabs custom-nav-tabs">
             <li class="active">
                 <a  href="#1" data-toggle="tab">Overview</a>
             </li>

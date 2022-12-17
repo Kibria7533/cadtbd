@@ -64,6 +64,7 @@
             position: relative;
             margin-left: auto;
             margin-right: auto;
+            background: #8a6d3b;
 
             -webkit-transition: all 0.15s ease-out;
             -moz-transition: all 0.15s ease-out;
