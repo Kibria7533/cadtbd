@@ -23,7 +23,7 @@
             <hr/>
             <p>
                 <br>
-                {{$data->body}}</p>
+                {!! $data->body !!}</p>
         </div>
     @endforeach
 <style>

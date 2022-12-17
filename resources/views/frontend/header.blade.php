@@ -1,5 +1,5 @@
-<div class="bg-warning py-3">
-    <div class="container">
+<div class="">
+    <div class="container-fluid">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">

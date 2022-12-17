@@ -6,18 +6,23 @@
             <div class="row">
                 <div class="container">
                     <div class="col-xs-3">
-                        <ul class="nav nav-tabs tabs-left">
-                            @foreach($abouts as $key=>$data)
-                                <li class="{{$key == 0 ?"active":""}}" ><a href="#{{$data->id}}" data-toggle="tab">{{$data->Action_key}}</a></li>
-                            @endforeach
-                        </ul>
+                        <div class="d-flex justify-content-center" style="margin-left: 50%">
+                            <div >
+                                <ul class="nav nav-tabs tabs-left">
+                                    @foreach($abouts as $key=>$data)
+                                        <li class="{{$key == 0 ?"active":""}}" ><a href="#tab{{$data->id}}" data-toggle="tab">{{$data->Action_key}}</a></li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        </div>
+
                     </div>
                     <div class="col-xs-9">
                         <!-- Tab panes -->
                         <div class="tab-content">
                             @foreach($abouts as $key=>$data)
-                                <div class="tab-pane {{$key == 0 ?"active":""}}" id="{{$data->id}}">
-                                    {{$data->description}}
+                                <div class="tab-pane {{$key == 0 ?"active":""}}" id="tab{{$data->id}}">
+                                    {!! $data->description !!}
                                 </div>
                             @endforeach
                         </div>

@@ -74,7 +74,7 @@
                         <span class="point-caption bg-blue-point"></span>
                         <span class="bottom-line bg-blue-point"></span>
                         <h4>{{$home_blog->titile}}</h4>
-                        <p>{{$home_blog->description}}</p>
+                        <p>{!! $home_blog->description !!}</p>
                         <div class="button-main bg-fio-point">read more</div>
                         <div class="like-wrap">
                             <a href="#"><i class="fa fa-heart col-red"></i></a><span>224</span>

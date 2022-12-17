@@ -14,7 +14,7 @@
             <img src="storage/{{$data->img}}" class="card-img-top">
             <div class="card-body d-flex flex-column">
                 <h4 class="card-title">{{$data->title}}</h4>
-                <p class="card-text">{{$data->description}}</p>
+                <p class="card-text">{!! $data->description !!}</p>
                 <button class="btn btn-primary mt-auto" type="button" data-url="https://www.wsj.com/articles/ai-machine-learning-jobs-among-highest-paid-in-tech-11548325180">Read</button>
             </div>
         </div>

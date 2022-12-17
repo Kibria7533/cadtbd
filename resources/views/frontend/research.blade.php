@@ -24,7 +24,7 @@
                         <a href="">
                             <img src="storage/{{$data->img}}" alt="" class="img-fluid" />
                         </a>
-                        <p class="lead"> {{$data->description}} &hellip;</p>
+                        <p class="lead"> {!! $data->description !!} &hellip;</p>
 
                         <a href="#" class="btn btn-primary">Read More <span class="glyphicon glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
                     </div>
@@ -73,7 +73,7 @@
                         <a href="#" class="list-group-item active">
                             <h4 class="list-group-item-heading">{{$data->title}}</h4>
                             <p class="list-group-item-text">
-                                {{$data->description}}
+                                {!! $data->description !!}
                             </p>
                         </a>
                     @endforeach
