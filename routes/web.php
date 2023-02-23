@@ -24,7 +24,7 @@ Route::get('/home', function () {
     $home_messeges=DB::select('select * from home_messeges');
     $home_sliders=DB::select('select * from home_sliders');
     return view('frontend.home',compact(['home_blogs','home_messeges','home_sliders']));
-});
+})->name('home');
 Route::get('/about', function () {
     $abouts=DB::select('select * from abouts');
     return view('frontend.about',compact(['abouts']));
@@ -44,7 +44,7 @@ Route::get('/login', function () {
 Route::get('/contact', function () {
     $contacts_and_footers=DB::select('select * from contacts_and_footers');
     return view('frontend.contact',compact(['contacts_and_footers']));
-});
+})->name('contact');
 Route::get('/press', function () {
     $presses=DB::select('select * from presses');
     return view('frontend.press',compact(['presses']));
@@ -64,6 +64,27 @@ Route::get('/research', function () {
     $researches =DB::select('select * from research');
     return view('frontend.research',compact(['researches']));
 });
+
+Route::get('/singleresearch/{id}', function ($id) {
+    $research =DB::table('research')->select('*')->where('id',$id)->get();
+    return view('frontend.singleresearch',compact(['research']));
+});
+
+Route::get('/singlepress/{id}', function ($id) {
+    $press =DB::table('presses')->select('*')->where('id',$id)->get();
+    return view('frontend.singlepress',compact(['press']));
+});
+Route::get('/singleevent/{id}', function ($id) {
+    $event =DB::table('events')->select('*')->where('id',$id)->get();
+    return view('frontend.singleevent',compact(['event']));
+});
+Route::get('/singleblog/{id}', function ($id) {
+    $home_blog =DB::table('home_blogs')->select('*')->where('id',$id)->get();
+    return view('frontend.singleblog',compact(['home_blog']));
+});
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
+
+
+

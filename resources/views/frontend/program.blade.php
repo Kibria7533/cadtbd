@@ -11,14 +11,14 @@
             its major scope of work as follows.
         </p>
     </div>
-
-    <div class="tab">
+<div class="container" style="min-height: 800px">
+    <div class="tab" style="height: auto">
         @foreach($programs as $data)
             <button class="tablinks" onclick="openTab(event, {{$data->id}})" id="defaultOpen">{{$data->title}}</button>
         @endforeach
     </div>
     @foreach($programs as $data)
-        <div id="{{$data->id}}" class="tabcontent">
+        <div id="{{$data->id}}" class="tabcontent" style="height: max-content">
             <h3>{{$data->title}}</h3>
             <hr/>
             <p>
@@ -26,6 +26,8 @@
                 {!! $data->body !!}</p>
         </div>
     @endforeach
+</div>
+
 <style>
     * {box-sizing: border-box}
     body {font-family: "Lato", sans-serif;}

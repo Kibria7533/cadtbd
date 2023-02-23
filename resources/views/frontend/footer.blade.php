@@ -1,34 +1,51 @@
-<footer id="footer">
-    <div class="footer-content container">
-        <div class="footer-adress text-center col-xs-12 col-sm-4 col-md-4">
-            <h4>{{setting('site.description')}}</h4>
-            <a href="/donate">
-                <button class="btn btn-secondary" style="font-size: 23px;
-    border: 1px solid;
-    border-radius: 16px;
-    width: 70%;">Donate</button>
-            </a>
+<div class="container">
 
-        </div>
-        <div class="footer-second col-xs-12 col-sm-4 col-md-4">
-            <div class="social-block text-center">
-                <div class="social-share">
-                    <i class="fa fa-2x fa-facebook"></i>
-                    <i class="fa fa-2x  fa-twitter"></i>
-                    <i class="fa fa-2x  fa-google-plus"></i>
-                    <i class="fa fa-2x  fa-instagram"></i>
-                </div>
+
+    <footer class="pt-4 my-md-5 pt-md-5 border-top">
+        <div class="row">
+            <div class="col-12 col-md">
+                <form class="form-inline  py-3"  method="POST" action="api/subscriber">
+                    <input type="email" name="email" placeholder="Enter your email..." required class="form-control"/>
+                    <div class="row w-100 my-4">
+                        <div class="col text-center">
+                            <button class="btn btn-primary">Subscribe Us</button>
+                        </div>
+                    </div>
+                </form>
             </div>
-            <p class="text-center footer-text1">Dhaka,Bangladesh</p>
-            <p class="text-center footer-text1">+88 {{setting('site.phone')}}</p>
-            <p class="text-center footer-text">info@cadtbd.org </p></div>
-        <div class="footer-third col-xs-12 col-sm-4 col-md-4">
-            <div class="copyright">
-                <span>Copyright 2022 CADT</span><br>
-                <span>All Rights Reserved</span>
+            <div class="col-6 col-md">
+                <h5>Our Social Media</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a class="text-muted" href="#">Facebook</a></li>
+                    <li><a class="text-muted" href="#">Youtube</a></li>
+                    <li><a class="text-muted" href="#">Google</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-md">
+                <h5>Resources</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a class="text-muted" href="/reasearch">Reasearch</a></li>
+                    <li><a class="text-muted" href="/event">Event</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-md">
+                <h5>About</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a class="text-muted" href="/about">Team</a></li>
+                    <li><a class="text-muted" href="#">Locations</a></li>
+                    <li><a class="text-muted" href="#">Privacy</a></li>
+                    <li><a class="text-muted" href="program">Terms</a></li>
+                </ul>
             </div>
         </div>
-    </div>
-    <div class="move-top-page">
-    </div>
-</footer>
+    </footer>
+<div class="container">
+<div class="row">
+<p>All Rights Reserved© 2023 CDAT</p>
+<p style="margin-left: 10px;">Location: {!! setting('site.address') !!}</p>
+<p style="margin-left: 10px;">Phone: {!! setting('site.phone') !!}</p>
+
+</div>
+
+</div>
+</div>

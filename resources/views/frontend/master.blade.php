@@ -1,64 +1,186 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <title>Cadt</title>
-    <meta name="generator" content="Bootply" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!--[if lt IE 9]>
-    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <link href="css/styles.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/demo.css" />
-    <link rel="stylesheet" href="css/testimonial.css" />
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <script type="text/javascript">
-        document.addEventListener("DOMContentLoaded", function(){
-
-            window.addEventListener('scroll', function() {
-
-                if (window.scrollY > 50) {
-                    document.getElementById('navbar_top').classList.add('fixed-top');
-                    // add padding top to show content behind navbar
-                    navbar_height = document.querySelector('.navbar').offsetHeight;
-                    document.body.style.paddingTop = navbar_height + 'px';
-                } else {
-                    document.getElementById('navbar_top').classList.remove('fixed-top');
-                    // remove padding top from body
-                    document.body.style.paddingTop = '0';
-                }
-            });
-        });
-        // DOMContentLoaded  end
-    </script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+          integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+            crossorigin="anonymous"></script>
+    <title>{!! setting('site.site_title') !!}</title>
     <style>
-        .vertical-menu {
-            width: 200px;
+        /* Large desktops and laptops */
+        @media (min-width: 1200px) {
+            .carousel-inner {
+                height: 400px;
+            }
+
+            .tb {
+                margin-bottom: 2px;
+                background: blue;
+                color: white;
+                width: 180px;
+                font-size: 22px;
+                padding: 4px
+            }
         }
 
-        .vertical-menu a {
-            background-color: #eee;
-            color: black;
-            display: block;
-            padding: 12px;
-            text-decoration: none;
+        /* Landscape tablets and medium desktops */
+        @media (min-width: 992px) and (max-width: 1199px) {
+            .carousel-inner {
+                height: 400px;
+            }
+
+            .tb {
+                margin-bottom: 2px;
+                background: blue;
+                color: white;
+                width: 150px;
+                font-size: 18px;
+                padding: 4px
+            }
         }
 
-        .vertical-menu a:hover {
-            background-color: #ccc;
+        /* Portrait tablets and small desktops */
+        @media (min-width: 768px) and (max-width: 991px) {
+            .gktoggle {
+                width: 100%;
+            }
+
+            .carousel-inner {
+                height: 200px;
+            }
+
+            .tb {
+                margin-bottom: 2px;
+                background: blue;
+                color: white;
+                width: 100px;
+                font-size: 17px;
+                padding: 4px
+            }
         }
 
-        .vertical-menu a.active {
-            background-color: #04AA6D;
-            color: white;
+        /* Landscape phones and portrait tablets */
+        @media (max-width: 767px) {
+            .gktoggle {
+                width: 100%;
+            }
+
+            .carousel-inner {
+                height: 200px;
+            }
+
+            .list-group-item {
+                font-size: 12px;
+            }
+
+            .tb {
+                margin-bottom: 2px;
+                background: blue;
+                color: white;
+                width: 90px;
+                font-size: 16px;
+                padding: 4px
+            }
+
+            #defaultOpen {
+                font-size: 12px;
+                margin-left: 0px;
+                text-align: start;
+            }
+
+            .home-blog {
+                margin-right: 0px;
+                margin-left: -51px;
+            }
+        }
+
+        /* Portrait phones and smaller */
+        @media (max-width: 480px) {
+            .gktoggle {
+                width: 100%;
+            }
+
+            .carousel-inner {
+                height: 200px;
+            }
+
+            .list-group-item {
+                font-size: 12px;
+            }
+
+            .tb {
+                margin-bottom: 2px;
+                background: blue;
+                color: white;
+                width: 70px;
+                font-size: 15px;
+                padding: 3px
+            }
+
+            .home-blog {
+                margin-right: 0px;
+                margin-left: -51px;
+            }
+
+            #defaultOpen {
+                font-size: 12px;
+                margin-left: 0px;
+                text-align: start;
+                width: 102%;
+                height: auto;
+                padding: 3px 3px;
+            }
+
+        }
+
+             @media (max-width: 400px) {
+            .gktoggle {
+                width: 100%;
+            }
+
+            .carousel-inner {
+                height: 200px;
+            }
+
+            .list-group-item {
+                font-size: 12px;
+            }
+
+            .tb {
+                margin-bottom: 2px;
+                background: blue;
+                color: white;
+                width: 70px;
+                font-size: 15px;
+                padding: 3px
+            }
+
+            .home-blog {
+                margin-right: 0px;
+                margin-left: -51px;
+            }
+
+            #defaultOpen {
+                font-size: 12px;
+                margin-left: 0px;
+                text-align: start;
+                width: 102%;
+                height: auto;
+                padding: 3px 3px;
+            }
+            .rd{
+            margin-top: -19px;
+            }
+
         }
     </style>
 </head>
@@ -76,44 +198,14 @@
 @yield('login')
 
 @yield('contact')
+@yield('singleevent')
+@yield('singleblog')
+@yield('singlepress')
+@yield('singleresearch')
+
 <!-- End of .container -->
 @include('frontend.footer')
 
-<!-- script references -->
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/nav-hover.min.js"></script>
-<script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
-<script type="text/javascript" src="js/main.js"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<!-- Place in the <head>, after the three links -->
-<script>
-    $('.testimonials-slider').bxSlider({
-        slideWidth: 800,
-        minSlides: 1,
-        maxSlides: 1,
-        slideMargin: 32,
-        auto: true,
-        autoControls: true
-    });
-</script>
-<script type="text/javascript">
-</script>
-<script>
-    window.onscroll = function() {myFunction()};
 
-    var navbar = document.getElementById("navbar");
-    var sticky = navbar.offsetTop;
-
-    function myFunction() {
-        if (window.pageYOffset >= sticky) {
-            navbar.classList.add("sticky")
-        } else {
-            navbar.classList.remove("sticky");
-        }
-    }
-</script>
 </body>
 </html>

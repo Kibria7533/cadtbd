@@ -8,16 +8,17 @@
         </div>
     </div>
     <div class="card-deck">
-  @foreach($presses as $data) @endforeach
+  @foreach($presses as $data)
         <div class="card my-3">
             <a class="btn card-link" data-url="https://wsj.com/pro/ai">{{$data->title}}</a>
-            <img src="storage/{{$data->img}}" class="card-img-top">
+            <img class="img-fluid" src="{{asset('/')}}storage/{{$data->img}}" class="card-img-top">
             <div class="card-body d-flex flex-column">
                 <h4 class="card-title">{{$data->title}}</h4>
-                <p class="card-text">{!! $data->description !!}</p>
-                <button class="btn btn-primary mt-auto" type="button" data-url="https://www.wsj.com/articles/ai-machine-learning-jobs-among-highest-paid-in-tech-11548325180">Read</button>
+                <p class="card-text">{!! substr_replace($data->description, "...", 320) !!}</p>
+                <button class="btn btn-primary mt-auto" type="button"><a href="/singlepress/{{$data->id}}">Read</a></button>
             </div>
         </div>
+         @endforeach
     </div>
 </div>
     <style>
